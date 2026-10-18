@@ -1,0 +1,14 @@
+{
+  "extension.description": "将 DeepSeek Harness 的 Web 页面嵌入 VS Code 编辑面板。",
+  "command.togglePanel": "DSH: 显示/隐藏面板",
+  "command.stopService": "DSH: 停止服务",
+  "command.restartService": "DSH: 重启服务",
+  "command.referenceCode": "DSH: 引用当前代码位置",
+  "command.showLogs": "DSH: 查看日志",
+  "command.copyDiagnostics": "DSH: 复制诊断信息",
+  "configuration.binPath": "可选的 @deepseek-ai/dsh 的 lib/bin.js 绝对路径。留空则自动探测。",
+  "configuration.nodePath": "可选的系统 Node.js 绝对路径。留空则自动探测。",
+  "configuration.args": "传递给 dsh 的参数。其中的 --port 会被插件覆盖。不要传 --public-url 或 TLS 参数：面板只支持本地回环 http 监听。",
+  "capabilities.untrustedWorkspaces": "需要启动本地 DSH 进程并监听本地回环端口，因此无法在受限模式下运行。",
+  "capabilities.virtualWorkspaces": "需要访问本地文件系统以定位 dsh 与 Node.js 的安装路径。"
+}

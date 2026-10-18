@@ -1,0 +1,9 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+
+# A temporary npm cache directory. Listed here because .vscodeignore is an exclusion list and any new
+# directory at the repo root is packaged into the VSIX by default.
+.npm-cache-tmp/

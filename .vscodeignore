@@ -1,0 +1,20 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.yarnrc
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/eslint.config.mjs
+**/*.map
+**/*.ts
+**/.vscode-test.*
+
+# An exclusion list, not an allowlist: a new directory at the repo root is packaged by default, so even
+# temporary ones belong here.
+.npm-cache-tmp/**
+
+# `.github/**` has to be listed here: vsce's defaultIgnore contains the bare `.github`, which is a no-op
+# (the `/**` expansion only applies to entries read from this file, and defaultIgnore is merged afterwards).
+.github/**
+node_modules/**

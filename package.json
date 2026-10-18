@@ -1,0 +1,188 @@
+{
+  "name": "dsh-vsc-light",
+  "displayName": "dsh-vsc-light",
+  "description": "%extension.description%",
+  "version": "1.0.0",
+  "publisher": "pylac",
+  "license": "MIT",
+  "icon": "res/dsh-vsc-light-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pylac/dsh_vsc_light"
+  },
+  "bugs": {
+    "url": "https://github.com/pylac/dsh_vsc_light/issues"
+  },
+  "homepage": "https://github.com/pylac/dsh_vsc_light#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "os": [
+    "win32"
+  ],
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "harness",
+    "ai",
+    "assistant",
+    "panel",
+    "chat"
+  ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onWebviewPanel:dshWebUI"
+  ],
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "extensionKind": [
+    "ui"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false,
+      "description": "%capabilities.untrustedWorkspaces%"
+    },
+    "virtualWorkspaces": {
+      "supported": false,
+      "description": "%capabilities.virtualWorkspaces%"
+    }
+  },
+  "contributes": {
+    "icons": {
+        "dsh-vsc-light-status-icon": {
+            "description": "dsh-vsc-light status bar icon",
+            "default": {
+                "fontPath": "./res/dsh-vsc-light-icon.woff",
+                "fontCharacter": "\\0041"
+            }
+        }
+    },
+    "commands": [
+      {
+        "command": "dsh.togglePanel",
+        "title": "%command.togglePanel%",
+        "icon": {
+          "light": "res/dsh-vsc-light-icon-light.svg",
+          "dark": "res/dsh-vsc-light-icon-dark.svg"
+        }
+      },
+      {
+        "command": "dsh.stopService",
+        "title": "%command.stopService%",
+        "icon": {
+            "light": "res/dsh-vsc-light-stop-light.svg",
+            "dark": "res/dsh-vsc-light-stop-dark.svg"
+          }
+      },
+      {
+        "command": "dsh.restartService",
+        "title": "%command.restartService%",
+        "icon": {
+            "light": "res/dsh-vsc-light-restart-light.svg",
+            "dark": "res/dsh-vsc-light-restart-dark.svg"
+          }
+      },
+      {
+        "command": "dsh.referenceCode",
+        "title": "%command.referenceCode%",
+        "icon": {
+            "light": "res/dsh-vsc-light-icon-light.svg",
+            "dark": "res/dsh-vsc-light-icon-dark.svg"
+          }
+      },
+      {
+        "command": "dsh.showLogs",
+        "title": "%command.showLogs%",
+        "icon": {
+          "light": "res/dsh-vsc-light-icon-light.svg",
+          "dark": "res/dsh-vsc-light-icon-dark.svg"
+        }
+      },
+      {
+        "command": "dsh.copyDiagnostics",
+        "title": "%command.copyDiagnostics%"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "dsh.togglePanel",
+          "group": "navigation@10"
+        },
+        {
+          "command": "dsh.restartService",
+          "group": "navigation@11",
+          "when": "activeWebviewPanelId == dshWebUI"
+        },
+        {
+          "command": "dsh.stopService",
+          "group": "navigation@12",
+          "when": "activeWebviewPanelId == dshWebUI"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "dsh.togglePanel",
+        "key": "ctrl+alt+d"
+      },
+      {
+        "command": "dsh.referenceCode",
+        "key": "ctrl+alt+k",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "DSH",
+      "properties": {
+        "dsh.binPath": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.binPath%"
+        },
+        "dsh.nodePath": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.nodePath%"
+        },
+        "dsh.args": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "--profile",
+            "web",
+            "--no-open"
+          ],
+          "description": "%configuration.args%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "clean": "node -e \"require('fs').rmSync('out',{recursive:true,force:true})\"",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src",
+    "package": "vsce package --no-dependencies",
+    "package:list": "vsce ls --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "24.x",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^4.0.0",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extension.description": "Embed the DeepSeek Harness web UI in a VS Code editor panel.",
+  "command.togglePanel": "DSH: Show/Hide Panel",
+  "command.stopService": "DSH: Stop Service",
+  "command.restartService": "DSH: Restart Service",
+  "command.referenceCode": "DSH: Reference Current Code Location",
+  "command.showLogs": "DSH: Show Logs",
+  "command.copyDiagnostics": "DSH: Copy Diagnostics",
+  "configuration.binPath": "Optional absolute path to the @deepseek-ai/dsh lib/bin.js entry point. Leave empty to detect it automatically.",
+  "configuration.nodePath": "Optional absolute path to the system Node.js executable. Leave empty to detect it automatically.",
+  "configuration.args": "Arguments passed to dsh. Any --port is overridden by the extension. Do not pass --public-url or TLS flags: the panel only works with the loopback http listener.",
+  "capabilities.untrustedWorkspaces": "Starts a local DSH process and listens on a loopback port, so it cannot run in Restricted Mode.",
+  "capabilities.virtualWorkspaces": "Needs local filesystem access to locate the dsh and Node.js installations."
+}

@@ -1,0 +1,17 @@
+# Normalise line endings so CRLF noise from Windows does not creep into diffs.
+# Before this file existed, git warned "LF will be replaced by CRLF" on every touched file.
+* text=auto eol=lf
+
+# These two must keep CRLF or they may not run on Windows.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files get no line-ending translation at all.
+*.png binary
+*.jpg binary
+*.gif binary
+*.vsix binary
+
+# Generated artifacts should not show up in diffs or language stats.
+out/** linguist-generated=true
+package-lock.json linguist-generated=true

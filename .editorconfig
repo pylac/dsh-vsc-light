@@ -1,0 +1,25 @@
+# Editor-agnostic baseline so files stay consistent across editors and operating systems.
+# The indentation rules mirror what the repository already uses: 4 spaces in source, 2 in JSON.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+# Two trailing spaces in Markdown are a meaningful line break and must not be stripped.
+trim_trailing_whitespace = false
+
+[*.{json,jsonc,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.ts]
+indent_style = space
+indent_size = 4
+
+[*.mjs]
+indent_style = space
+indent_size = 4
