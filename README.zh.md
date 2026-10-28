@@ -130,7 +130,7 @@ DSH 面板获得焦点时，「重启服务」与「停止服务」也会出现�
 
 **面板显示以 `DSH proxy rejected the request:` 开头的消息**
 
-消息里会写明是哪道校验失败。`session` 表示会话 Cookie 未被接受；`origin` 或 `host` 表示请求不是来自面板。正常使用下不应出现 —— 请带上完整消息[提一个 issue](https://github.com/pylac/dsh_vsc_light/issues)。
+消息里会写明是哪道校验失败。`session` 表示会话 Cookie 未被接受；`origin` 或 `host` 表示请求不是来自面板。正常使用下不应出现 —— 请带上完整消息[提一个 issue](https://github.com/pylac/dsh-vsc-light/issues)。
 
 **"Could not find the @deepseek-ai/dsh entry point"**
 

@@ -130,7 +130,7 @@ Run **`DSH: Copy Diagnostics`** and attach the result. It contains the versions,
 
 **The panel shows a message starting with `DSH proxy rejected the request:`**
 
-The message names the check that failed. `session` means the session cookie was not accepted; `origin` or `host` means the request did not come from the panel. This should not happen in normal use — please [open an issue](https://github.com/pylac/dsh_vsc_light/issues) with the full message.
+The message names the check that failed. `session` means the session cookie was not accepted; `origin` or `host` means the request did not come from the panel. This should not happen in normal use — please [open an issue](https://github.com/pylac/dsh-vsc-light/issues) with the full message.
 
 **"Could not find the @deepseek-ai/dsh entry point"**
 

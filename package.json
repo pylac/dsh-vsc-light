@@ -2,18 +2,18 @@
   "name": "dsh-vsc-light",
   "displayName": "dsh-vsc-light",
   "description": "%extension.description%",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "pylac",
   "license": "MIT",
   "icon": "res/dsh-vsc-light-icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pylac/dsh_vsc_light"
+    "url": "https://github.com/pylac/dsh-vsc-light"
   },
   "bugs": {
-    "url": "https://github.com/pylac/dsh_vsc_light/issues"
+    "url": "https://github.com/pylac/dsh-vsc-light/issues"
   },
-  "homepage": "https://github.com/pylac/dsh_vsc_light#readme",
+  "homepage": "https://github.com/pylac/dsh-vsc-light#readme",
   "engines": {
     "vscode": "^1.85.0"
   },
